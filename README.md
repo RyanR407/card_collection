@@ -36,14 +36,13 @@ This guide will help you set up and run the script even if you've never used Pyt
 
 1. **Download Project Files**
    - Place the provided `app.py`, `requirements.txt`, and your Excel template (`original_data.xlsx`) in a clearly labeled project folder, e.g.:
-
      ```sh
-     Documents\CardPriceScraper
+     C:\User\*YOURUSERNAME*\Documents\CardPriceScraper\
      ```
 
 2. **Make a Copy of the Excel File**
-   - Right-click your original Excel file (`original_data.xlsx`) and select **Copy**, then right-click again in the same folder and select **Paste**.
-   - Rename the copied file (e.g., `card_prices.xlsx`). This ensures your original file stays safe.
+   - Right-click your original Excel file, in the data folder, (`original_data.xlsx`) and select **Copy**, then right-click again in the same folder and select **Paste**.
+   - Rename the copied file, in the data folder, (e.g., `card_prices.xlsx`). This ensures your original file stays safe.
 
 ---
 
@@ -105,11 +104,15 @@ The script uses **Selenium**, which needs ChromeDriver to automate Chrome browse
 
 ### Step 5: Prepare Your Excel File
 
-- Open the copied Excel file (`card_prices.xlsx`).
+- Open the copied Excel file, in the data folder, (`card_prices.xlsx`).
 - Navigate to the **"Cards"** worksheet.
 - Paste the **TCGPlayer.com** URLs for your cards in the **"Link"** column.
 - Enter the quantity of each card in the **"Qty."** column.
 - Save and close the Excel file.
+- Ensure that you have the entire file path to the `card_prices.xlsx` set as your `excel_file` in app.py, on line 11.
+  ```python
+  excel_file = r"C:\User\*YOURUSERNAME*\Documents\CardPriceScraper\data\card_prices.xlsx"
+  ```
 
 ---
 
