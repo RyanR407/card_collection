@@ -8,7 +8,7 @@ from openpyxl import load_workbook
 from openpyxl.styles import Border, Side, Alignment
 
 debug = False
-excel_file = r"C:\User\*YOURUSERNAME*\Documents\CardPriceScraper\data\card_prices.xlsx"
+excel_file = r"C:\User\*YOURUSERNAME*\Documents\CardCollection\data\card_prices.xlsx"
 
 class CardScraper:
     def __init__(self, excel_file, debug=False):
